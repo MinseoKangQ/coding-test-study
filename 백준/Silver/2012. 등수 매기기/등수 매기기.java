@@ -18,15 +18,11 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             pq.add(arr.get(i));
-//            if (arr.get(i) - (i+1) != 0) {
-//                answer += Math.abs(arr.get(i) - (i+1));
-//            }
+            if (arr.get(i) - (i+1) != 0) {
+                answer += Math.abs(arr.get(i) - (i+1));
+            }
         }
-
-        for(int i = 0; i < n; i++) {
-            answer += Math.abs(pq.poll() - (i+1));
-        }
-
+        
         return answer;
 
     }
